@@ -7,6 +7,12 @@
     <title>Contributions List from Excel</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
         /* Custom styles for the table */
         .table-hover tbody tr:hover {
             background-color: #f1f1f1; /* Light gray background on hover */
@@ -46,7 +52,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container mt-5 pt-5">
         <h2 class="text-center my-4">Contributions List from Excel</h2>
         <table class="table table-bordered table-hover" id="data-table">
             <thead class="thead-light">
@@ -54,8 +60,7 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Location</th>
-                    <th>joining Date</th>
-                    
+                    <th>Joining Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -81,11 +86,14 @@
                 row.insertCell(0).textContent = index + 1; // Index
                 row.insertCell(1).textContent = item.Name;
                 row.insertCell(2).textContent = item.Location;
-                row.insertCell(3).textContent = item["Contribution Date"];
-               
+                row.insertCell(3).textContent = item["Joining Date"];
             });
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
