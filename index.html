@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>समाज को आर्थिक स्वतंत्रता की ओर</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         /* Custom CSS */
         body {
@@ -15,7 +16,7 @@
         }
 
         .hero {
-            background: url('https://picsum.photos/seed/picsum/1920/1080') no-repeat center center/cover;
+            background: url('https://picsum.photos/1920/1080') no-repeat center center/cover;
             color: white;
             height: 100vh;
             display: flex;
@@ -57,12 +58,36 @@
             position: relative;
             z-index: 1;
             margin: 5px;
-            /* Add some margin between buttons */
         }
 
         .btn-primary:hover {
             background-color: #0056b3;
         }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .impact-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .impact-card {
+            margin: 20px 0;
+            border: 1px solid #007bff;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .impact-card i {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
 
         footer {
             background-color: #007bff;
@@ -115,6 +140,260 @@
             font-size: 18px;
             text-align: center;
         }
+
+        /* Impact Section */
+        #impact {
+            background-color: #f8f9fa;
+            /* Light background for impact section */
+            padding: 60px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            /* Ensure a minimum height */
+        }
+
+        #impact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #007bff;
+            /* Blue color for heading */
+        }
+
+        #impact p {
+            font-size: 1.2rem;
+            color: #555;
+            /* Dark gray for the paragraph text */
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 800px;
+            /* Restrict paragraph width for readability */
+        }
+
+        /* Help Section */
+        #help {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            /* White background for help section */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        #help h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        #help p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 800px;
+            /* Restrict paragraph width for readability */
+        }
+
+        /* Cards for Help Section */
+        .help-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 1200px;
+            /* Center the cards container */
+        }
+
+        .help-card {
+            background: #f8f9fa;
+            /* Light background for each card */
+            border-radius: 10px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .help-card i {
+            color: #007bff;
+            /* Blue icon color */
+            margin-bottom: 15px;
+        }
+
+        .help-card h3 {
+            font-size: 1.5rem;
+            color: #333;
+            /* Dark gray for heading */
+            margin-bottom: 15px;
+        }
+
+        .help-card p {
+            font-size: 1rem;
+            color: #555;
+            /* Dark gray for paragraph */
+        }
+
+        .help-card:hover {
+            transform: translateY(-10px);
+            /* Hover effect: moves up */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            /* Stronger shadow on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+
+            #impact h2,
+            #help h2 {
+                font-size: 2rem;
+                /* Smaller headings on mobile */
+            }
+
+            .help-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .help-card {
+                width: 100%;
+                /* Cards take full width on mobile */
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Custom styles for donation buttons */
+        .donation-btn {
+            transition: background-color 0.3s, transform 0.3s;
+            background-color: #007bff;
+            /* Default blue color */
+            color: white;
+            /* Text color */
+        }
+
+        .donation-btn:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+            transform: scale(1.05);
+            /* Slightly enlarge the button */
+        }
+
+        .donation-option {
+            margin-bottom: 15px;
+            /* Space between donation options */
+            padding: 20px;
+            /* Padding inside the card */
+            border-radius: 10px;
+            /* Rounded corners */
+            transition: background-color 0.3s;
+            /* Smooth transition for background color */
+            background-color: #f8f9fa;
+            /* Light background color for cards */
+        }
+
+        .donation-option:hover {
+            background-color: #e2e6ea;
+            /* Change background color on hover */
+        }
+
+        /* Make input fields smaller */
+        .donor-details input {
+            width: 90%;
+            /* Adjust width as needed */
+            margin-bottom: 10px;
+            /* Space between input fields */
+        }
+
+        /* Optional: Add some padding to the donation options */
+        .donation-options {
+            padding-left: 20px;
+            /* Add padding to the left */
+        }
+
+        /* Optional: Add some margin to the donor details */
+        .donor-details {
+            padding-right: 20px;
+            /* Add padding to the right */
+        }
+
+        #donate {
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+
+        /* CSS for Success Stories Cards */
+
+        .success-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .success-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            color: #007bff;
+            /* Blue color for section title */
+        }
+
+
+        /* Animation for member cards */
+        .member-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: scale(1.05);
+            /* Scale up the card */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            /* Add shadow on hover */
+        }
+        #members p{
+            text-align: center;
+        }
+
+
+        /* Background for the objectives section */
+    #objectives {
+        background-color: #f0f8ff; /* Light background color */
+        padding: 40px 0; /* Add some padding */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    /* Animation for objective cards */
+    .objective-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .objective-card:hover {
+        transform: translateY(-10px); /* Move the card up on hover */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        border-radius: 20%;
+    }
+
+    .social-icon {
+        color: white; /* Icon color */
+        margin: 0 10px; /* Space between icons */
+        text-decoration: none; /* Remove underline */
+        transition: color 0.3s; /* Smooth color transition */
+    }
+    
+    .social-icon:hover {
+        color: #007bff; /* Change color on hover */
+    }
     </style>
 </head>
 
@@ -123,7 +402,10 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">indebtfreefoundation</a>
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="Indebt Free Foundation Logo" style="height: 40px; margin-right: 10px;">
+                Indebt Free Foundation
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -142,17 +424,88 @@
 
     <!-- Hero Section -->
     <header class="hero" id="home">
-        <h1>समाज को आर्थिक स्वतंत्रता की ओर</h1>
-        <p>हम कर्ज से राहत, कानूनी सुरक्षा और स्थिरता प्रदान करते हैं।</p>
+        <h1>आपकी मदद से एक नई शुरुआत, कर्ज़ से मुक्ति की राह!</h1>
+        <p>With Your Help, A New Beginning, Freedom from Debt!</p>
         <div>
-            <div>
-                <a href="#join" class="btn btn-primary">हमसे जुड़ें</a>
-                <a href="#donate" class="btn btn-primary">डोनेट करें</a>
-                <a href="/Aboutus.html" class="btn btn-primary">अधिक जानें</a>
-            </div>
+            <a href="#join" class="btn btn-primary">Join Us</a>
+            <a href="#donate" class="btn btn-primary">Donate</a>
+            <a href="Aboutus.html" class="btn btn-primary">About Us</a>
+        </div>
     </header>
 
-    <!-- Join Us Section -->
+
+
+
+    <div class="container">
+        <!-- Impact Section -->
+        <section id="impact" class="section impact">
+            <h2>Our Impact</h2>
+            <p>We have assisted over 10,000 individuals in overcoming financial challenges and creating sustainable
+                futures. Our programs focus on education, financial literacy, and community empowerment.</p>
+        </section>
+
+        <div class="container impact-section">
+            <!-- <h2 class="section-title">Our Impact (हमारा प्रभाव)</h2> -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h5>Economic Strength (आर्थिक मजबूती)</h5>
+                        <p>कर्ज मुक्त परिवारों से मजबूत समाज का निर्माण।<br>
+                            Building a strong society by empowering debt-free families.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <i class="fas fa-leaf"></i>
+                        <h5>Cleanliness & Environment (स्वच्छता और पर्यावरण)</h5>
+                        <p>कचरा प्रबंधन, गोबर से जैविक खाद, और गोमूत्र से आयुर्वेदिक उत्पादों के निर्माण के माध्यम से
+                            पर्यावरण की रक्षा।<br>
+                            Promoting waste management, producing bio-fertilizers, and Ayurvedic products from cow dung
+                            and urine.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <i class="fas fa-briefcase"></i>
+                        <h5>Employment (रोजगार)</h5>
+                        <p>लाखों रोजगार के अवसर उत्पन्न करना।<br>
+                            Creating millions of employment opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How You Can Help Section -->
+        <section id="help" class="section help">
+            <h2>How You Can Help (आप कैसे मदद कर सकते हैं)?</h2>
+            <p>हमारी एनजीओ को मदद देने के कई तरीके हैं, और आपकी सहायता से हम और अधिक लोगों की मदद कर सकते हैं।</p>
+            <p>Here’s how you can make a difference:</p>
+            <div class="help-cards">
+                <div class="help-card">
+                    <i class="fas fa-donate fa-3x"></i>
+                    <h3>Donate (दान करें)</h3>
+                    <p>Donate to support our work and help us assist more people in need.<br>दीनदयाल प्रयास के लिए दान
+                        करें।</p>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h3>Volunteer (स्वयंसेवक बनें)</h3>
+                    <p>Become a volunteer and assist us in providing support to those in need.<br>समय दें और हमारी मदद
+                        से दूसरों की सहायता करें।</p>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-bullhorn fa-3x"></i>
+                    <h3>Spread Awareness (जागरूकता फैलाएं)</h3>
+                    <p>Spread the word through social media, friends, and family to raise awareness about debt
+                        issues.<br>कर्ज़ के बारे में जागरूकता फैलाएं।</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
     <!-- Join Us Section -->
     <div class="container my-5" id="join">
         <h2 class="section-title">हमसे जुड़ें</h2>
@@ -163,118 +516,132 @@
         </iframe>
     </div>
 
-
+    <!-- Donation Section -->
     <div class="container my-5" id="donate">
         <h2 class="section-title">डोनेशन करने का विकल्प</h2>
         <p>आपका योगदान हमारे कर्ज मुक्त अभियान को बल देगा।</p>
-      
-        <!-- Donor Details Form -->
-        <div class="donor-details">
-          <input type="text" id="donorName" class="form-control my-2" placeholder="अपना नाम दर्ज करें" required />
-          <input type="email" id="donorEmail" class="form-control my-2" placeholder="अपना ईमेल दर्ज करें" required />
-          <input type="tel" id="donorPhone" class="form-control my-2" placeholder="अपना फ़ोन नंबर दर्ज करें" required />
-        </div>
-      
-        <!-- Donation Options -->
-        <div class="donation-options">
-          <div class="donation-option">
-            <h5>₹500</h5>
-            <button class="btn btn-primary" onclick="makePayment(500)">डोनेट करें</button>
-          </div>
-          <div class="donation-option">
-            <h5>₹1,000</h5>
-            <button class="btn btn-primary" onclick="makePayment(1000)">डोनेट करें</button>
-          </div>
-          <div class="donation-option">
-            <h5>₹5,000</h5>
-            <button class="btn btn-primary" onclick="makePayment(5000)">डोनेट करें</button>
-          </div>
-          <div class="donation-option">
-            <h5>₹10,000</h5>
-            <button class="btn btn-primary" onclick="makePayment(10000)">डोनेट करें</button>
-          </div>
-          <div class="donation-option">
-            <h5>या अपनी राशि डालें</h5>
-            <input type="number" id="customAmount" class="form-control" placeholder="राशि डालें" />
-            <button class="btn btn-primary" onclick="customPayment()">डोनेट करें</button>
-          </div>
+
+        <div class="row">
+            <!-- Donor Details Form -->
+            <div class="col-md-6">
+                <div class="donor-details">
+                    <input type="text" id="donorName" class="form-control my-2" placeholder="अपना नाम दर्ज करें"
+                        required />
+                    <input type="email" id="donorEmail" class="form-control my-2" placeholder="अपना ईमेल दर्ज करें"
+                        required />
+                    <input type="tel" id="donorPhone" class="form-control my-2" placeholder="अपना फ़ोन नंबर दर्ज करें"
+                        required />
+                </div>
+            </div>
+
+            <!-- Donation Options -->
+            <div class="col-md-6">
+                <div class="donation-options">
+                    <div class="donation-option card">
+                        <h5>₹500</h5>
+                        <button class="btn btn-primary donation-btn" onclick="makePayment(500)">डोनेट करें</button>
+                    </div>
+                    <div class="donation-option card">
+                        <h5>₹1,000</h5>
+                        <button class="btn btn-primary donation-btn" onclick="makePayment(1000)">डोनेट करें</button>
+                    </div>
+                    <div class="donation-option card">
+                        <h5>₹5,000</h5>
+                        <button class="btn btn-primary donation-btn" onclick="makePayment(5000)">डोनेट करें</button>
+                    </div>
+                    <div class="donation-option card">
+                        <h5>₹10,000</h5>
+                        <button class="btn btn-primary donation-btn" onclick="makePayment(10000)">डोनेट करें</button>
+                    </div>
+                    <div class="donation-option card">
+                        <h5>या अपनी राशि डालें</h5>
+                        <input type="number" id="customAmount" class="form-control" placeholder="राशि डालें" />
+                        <button class="btn btn-primary donation-btn" onclick="customPayment()">डोनेट करें</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <p>आपका योगदान हमारी योजनाओं को साकार करेगा!</p>
-      </div>
-    
+    </div>
 
-    <!-- Become a Director Section -->
-    <!-- Become a Director Section -->
+    <!-- Card for Director Benefits -->
     <div class="container my-5" id="become-director">
         <h2 class="section-title">डायरेक्टर बनने की प्रक्रिया</h2>
 
         <!-- Card for Director Opportunity -->
-        <div class="card mb-4">
+        <div class="card mb-4 text-center">
             <div class="card-body">
+                <i class="icon fas fa-user-tie" style="font-size: 3rem; color: #007bff;"></i>
                 <p>100 नए सदस्य जोड़ने पर डायरेक्टर बनने का अवसर मिलेगा!</p>
             </div>
         </div>
 
         <!-- Card for Donation Requirement -->
-        <div class="card mb-4">
+        <div class="card mb-4 text-center">
             <div class="card-body">
+                <i class="icon fas fa-donate" style="font-size: 3rem; color: #007bff;"></i>
                 <p>₹1,00,000 का डोनेशन करके भी डायरेक्टर बन सकते हैं!</p>
             </div>
         </div>
 
         <!-- Card for Incentive for Joining Members -->
-        <div class="card mb-4">
+        <div class="card mb-4 text-center">
             <div class="card-body">
+                <i class="icon fas fa-percent" style="font-size: 3rem; color: #007bff;"></i>
                 <p>जोड़ने वाले सदस्य के लिए 10% प्रोत्साहन राशि।</p>
             </div>
         </div>
 
         <!-- Card for Director Benefits -->
-        <div class="card">
+        <div class="card text-center">
             <div class="card-body">
                 <h5 class="card-title">डायरेक्टर के लाभ:</h5>
-                <ul>
-                    <li>सामाजिक पहचान और सम्मान।</li>
-                    <li>नौकरियों और निवेश के अवसर।</li>
-                    <li>नए सदस्य जोड़ने पर अतिरिक्त लाभ।</li>
+                <ul class="list-unstyled">
+                    <li><i class="icon fas fa-check-circle"></i> सामाजिक पहचान और सम्मान।</li>
+                    <li><i class="icon fas fa-briefcase"></i> नौकरियों और निवेश के अवसर।</li>
+                    <li><i class="icon fas fa-plus-circle"></i> नए सदस्य जोड़ने पर अतिरिक्त लाभ।</li>
                 </ul>
             </div>
         </div>
     </div>
+
+
     <!-- Display of Added Members Section -->
     <div class="container my-5" id="members">
         <h2 class="section-title">सदस्य जोड़ने का प्रदर्शन</h2>
         <p>डायरेक्टर के आधार पर व्यवस्थित सदस्य का विवरण:</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>सदस्य का नाम</th>
-                    <th>संपर्क जानकारी</th>
-                    <th>जोड़ने की तारीख</th>
-                    <th>प्रोफ़ाइल चित्र</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>राधिका शर्मा</td>
-                    <td>radhika@example.com</td>
-                    <td>2023-01-15</td>
-                    <td><img src="https://via.placeholder.com/50" alt="Profile" class="img-fluid"></td>
-                </tr>
-                <tr>
-                    <td>सौरव मेहता</td>
-                    <td>saurav@example.com</td>
-                    <td>2023-02-20</td>
-                    <td><img src="https://via.placeholder.com/50" alt="Profile" class="img-fluid"></td>
-                </tr>
-                <tr>
-                    <td>नीता वर्मा</td>
-                    <td>neeta@example.com</td>
-                    <td>2023-03-10</td>
-                    <td><img src="https://via.placeholder.com/50" alt="Profile" class="img-fluid"></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 text-center member-card">
+                    <img src="https://via.placeholder.com/150" alt="राधिका शर्मा" class="card-img-top img-fluid"
+                        style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">राधिका शर्मा</h5>
+                        <p class="card-text text-center">जोड़ने की तारीख: 2023-01-15</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 text-center member-card">
+                    <img src="https://via.placeholder.com/150" alt="सौरव मेहता" class="card-img-top img-fluid"
+                        style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">सौरव मेहता</h5>
+                        <p class="card-text text-center">जोड़ने की तारीख: 2023-02-20</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 text-center member-card">
+                    <img src="https://via.placeholder.com/150" alt="नीता वर्मा" class="card-img-top img-fluid"
+                        style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">नीता वर्मा</h5>
+                        <p class="card-text text-center">जोड़ने की तारीख: 2023-03-10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Donation and Contribution Tracking Section -->
@@ -294,41 +661,45 @@
         <h2 class="section-title">फाउंडेशन के उद्देश्य और रणनीतियाँ</h2>
         <div class="row">
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
+                <div class="card mb-4 objective-card">
+                    <div class="card-body text-center">
+                        <i class="icon fas fa-money-bill-wave" style="font-size: 3rem; color: #007bff;"></i>
                         <h5 class="card-title">कर्ज से मुक्ति योजना:</h5>
-                        <p class="card-text">प्रत्येक सदस्य मासिक ₹1,000 का योगदान करेगा, जो कर्ज राहत में उपयोग होगा।
-                        </p>
+                        <p class="card-text">प्रत्येक सदस्य मासिक ₹1,000 का योगदान करेगा, जो कर्ज राहत में उपयोग होगा।</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
+                <div class="card mb-4 objective-card">
+                    <div class="card-body text-center">
+                        <i class="icon fas fa-leaf" style="font-size: 3rem; color: #007bff;"></i>
                         <h5 class="card-title">कृषि और पर्यटन में निवेश:</h5>
                         <p class="card-text">किसानों को स्मार्ट कृषि, जैविक खेती, जल प्रबंधन में जोड़ा जाएगा।</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
+                <div class="card mb-4 objective-card">
+                    <div class="card-body text-center">
+                        <i class="icon fas fa-recycle" style="font-size: 3rem; color: #007bff;"></i>
                         <h5 class="card-title">फूड वेस्ट मैनेजमेंट:</h5>
                         <p class="card-text">खाद्य अपशिष्ट प्रबंधन और पुनः उपयोग के लिए प्रणाली विकसित करना।</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
+                <div class="card mb-4 objective-card">
+                    <div class="card-body text-center">
+                        <i class="icon fas fa-user-graduate" style="font-size: 3rem; color: #007bff;"></i>
                         <h5 class="card-title">प्रशिक्षण और रोजगार:</h5>
                         <p class="card-text">बेरोजगारों को प्रशिक्षित करना और रोजगार सृजन में योगदान देना।</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
+                <div class="card mb-4 objective-card">
+                    <div class="card-body text-center">
+                        <i class="icon fas fa-bullhorn" style="font-size: 3rem; color: #007bff;"></i>
                         <h5 class="card-title">राजनीतिक सक्रियता:</h5>
                         <p class="card-text">युवा नेताओं और कार्यकर्ताओं को राजनीति में शामिल करना।</p>
                     </div>
@@ -336,13 +707,16 @@
             </div>
         </div>
     </div>
+    
 
     <!-- How Your Contribution is Utilized Section -->
     <div class="container my-5" id="utilization">
-        <h2 class="section-title">आपके योगदान का उपयोग कैसे होता है?</h2>
-        <h5>इन्फोग्राफिक और पाई चार्ट:</h5>
-        <img src="image.png" alt="Contribution Utilization Infographic" class="img-fluid mb-4">
-        <ul>
+        <h2 class="section-title text-center">आपके योगदान का उपयोग कैसे होता है?</h2>
+        <h5 class="text-center">इन्फोग्राफिक और पाई चार्ट:</h5>
+        <div class="text-center mb-4">
+            <img src="image.png" alt="Contribution Utilization Infographic" class="img-fluid">
+        </div>
+        <ul class="list-unstyled text-center">
             <li>25% कर्ज माफी - "बैंकों और वित्तीय संस्थाओं से कर्ज निवारण में सहायक।"</li>
             <li>15% प्रशासनिक खर्च - "संगठन संचालन और सेवाओं को प्रभावी बनाए रखना।"</li>
             <li>10% आपातकालीन फंड - "आपातकालीन संकटों से निपटने के लिए तैयार।"</li>
@@ -350,99 +724,145 @@
         </ul>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <h5>संपर्क जानकारी</h5>
-            <p><strong>ईमेल:</strong> <a href="mailto:info@debtfreefoundation.com">info@debtfreefoundation.com</a></p>
-            <p><strong>फोन:</strong> +91-XXXXXXXXXX</p>
-            <p><strong>सोशल मीडिया लिंक:</strong> <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a
-                    href="#">Instagram</a>, <a href="#">LinkedIn</a></p>
-            <p><strong>कानूनी नोटिस:</strong> "कर्ज मुक्त भारत अभियान का हिस्सा बनने के लिए आपका स्वागत है!"</p>
+    <!-- Success Stories Section -->
+    <div class="container my-5" id="success-stories">
+        <h2 class="section-title text-center">सफलता की कहानियाँ</h2>
+        <div class="row">
+            <!-- Success Story 1 -->
+            <div class="col-md-6">
+                <div class="card mb-4 success-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Success Story 1</h5>
+                        <p class="card-text">
+                            "मैंने कर्ज़ के कारण आत्महत्या के बारे में सोचा था, लेकिन इस एनजीओ ने मेरी मदद की। अब मैं
+                            कर्ज़ मुक्त हूं और एक नई शुरुआत कर रहा हूं।"
+                        </p>
+                        <p class="card-text">
+                            "I was thinking about suicide because of debt, but this NGO helped me. Today, I am debt-free
+                            and starting anew."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Story 2 -->
+            <div class="col-md-6">
+                <div class="card mb-4 success-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Success Story 2</h5>
+                        <p class="card-text">
+                            "मुझे विश्वास नहीं था कि मेरी ज़िन्दगी फिर से पटरी पर आ सकती है, लेकिन इनकी मदद से अब मैं
+                            अपने कर्ज़ का सही तरीके से निपटारा कर रहा हूं।"
+                        </p>
+                        <p class="card-text">
+                            "I didn’t believe my life could get back on track, but with their help, I am now managing my
+                            debt in the right way."
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+
+
+   <!-- Footer -->
+<footer class="text-center">
+    <div class="container">
+        <h5>संपर्क जानकारी</h5>
+        <p><strong>ईमेल:</strong> <a href="mailto:info@debtfreefoundation.com">info@debtfreefoundation.com</a></p>
+        <p><strong>फोन:</strong> <a href="https://wa.me/918427986010">91-8427986010</a></p>
+        
+            <a href="https://www.facebook.com/profile.php?id=61571589090667&mibextid=ZbWKwL" class="social-icon" target="blank">
+                <i class="fab fa-facebook-f fa-2x"></i> 
+            </a> 
+            <a href="https://www.instagram.com/wrinnrahat_foundation/?fbclid=IwZXh0bgNhZW0CMTEAAR2ittsRA-aG85bV3K71YrrFJeIUPLVxPMmJ-SyC1q1EJvVMiPXUl_FZT5c_aem_4ZVxHTo43_2iEoQdeGix1Q" class="social-icon" target="blank">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+        </p>
+        <p><strong>Design & Develop By ALMA Creators</strong></p>
+    </div>
+</footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
     <script>
         function makePayment(amount) {
-          const donorName = document.getElementById("donorName").value;
-          const donorEmail = document.getElementById("donorEmail").value;
-          const donorPhone = document.getElementById("donorPhone").value;
-      
-          if (!donorName || !donorEmail || !donorPhone) {
-            alert("कृपया अपना नाम, ईमेल, और फ़ोन नंबर भरें।");
-            return;
-          }
-      
-          fetch("/create-order", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ amount, donorName, donorEmail, donorPhone }),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              if (data.success) {
-                const options = {
-                  key: "YOUR_RAZORPAY_KEY_ID",
-                  amount: data.amount,
-                  currency: "INR",
-                  name: donorName,
-                  description: "Donation Payment",
-                  order_id: data.order_id,
-                  prefill: {
-                    name: donorName,
-                    email: donorEmail,
-                    contact: donorPhone,
-                  },
-                  theme: {
-                    color: "#3399cc",
-                  },
-                  handler: function (response) {
-                    // Handle successful payment
-                    alert("Payment Successful!");
-                    fetch("/verify-payment", {
-                      method: "POST",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({
-                        paymentId: response.razorpay_payment_id,
-                        orderId: response.razorpay_order_id,
-                        donorName,
-                        donorEmail,
-                        donorPhone,
-                      }),
-                    });
-                  },
-                };
-      
-                const rzp = new Razorpay(options);
-                rzp.open();
-              } else {
-                alert("Failed to create order. Please try again.");
-              }
+            const donorName = document.getElementById("donorName").value;
+            const donorEmail = document.getElementById("donorEmail").value;
+            const donorPhone = document.getElementById("donorPhone").value;
+
+            if (!donorName || !donorEmail || !donorPhone) {
+                alert("कृपया अपना नाम, ईमेल, और फ़ोन नंबर भरें।");
+                return;
+            }
+
+            fetch("/create-order", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ amount, donorName, donorEmail, donorPhone }),
             })
-            .catch((error) => {
-              console.error("Error:", error);
-              alert("Something went wrong. Please try again.");
-            });
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        const options = {
+                            key: "YOUR_RAZORPAY_KEY_ID",
+                            amount: data.amount,
+                            currency: "INR",
+                            name: donorName,
+                            description: "Donation Payment",
+                            order_id: data.order_id,
+                            prefill: {
+                                name: donorName,
+                                email: donorEmail,
+                                contact: donorPhone,
+                            },
+                            theme: {
+                                color: "#3399cc",
+                            },
+                            handler: function (response) {
+                                alert("Payment Successful!");
+                                fetch("/verify-payment", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    },
+                                    body: JSON.stringify({
+                                        paymentId: response.razorpay_payment_id,
+                                        orderId: response.razorpay_order_id,
+                                        donorName,
+                                        donorEmail,
+                                        donorPhone,
+                                    }),
+                                });
+                            },
+                        };
+
+                        const rzp = new Razorpay(options);
+                        rzp.open();
+                    } else {
+                        alert("Failed to create order. Please try again.");
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                    alert("Something went wrong. Please try again.");
+                });
         }
-      
+
         function customPayment() {
-          const amount = document.getElementById("customAmount").value;
-          if (amount && amount > 0) {
-            makePayment(amount);
-          } else {
-            alert("Please enter a valid amount!");
-          }
+            const amount = document.getElementById("customAmount").value;
+            if (amount && amount > 0) {
+                makePayment(amount);
+            } else {
+                alert("Please enter a valid amount!");
+            }
         }
-      </script>
+
+    </script>
 </body>
 
 </html>

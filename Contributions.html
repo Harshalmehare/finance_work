@@ -31,13 +31,8 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Location</th>
-                    <th>Month 1</th>
-                    <th>Month 2</th>
-                    <th>Month 3</th>
-                    <th>Month 4</th>
-                    <th>Month 5</th>
-                    <th>Month 6</th>
-                    <th>Total</th>
+                    <th>joining Date</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -63,13 +58,8 @@
                 row.insertCell(0).textContent = index + 1; // Index
                 row.insertCell(1).textContent = item.Name;
                 row.insertCell(2).textContent = item.Location;
-                row.insertCell(3).textContent = item["Month 1"];
-                row.insertCell(4).textContent = item["Month 2"];
-                row.insertCell(5).textContent = item["Month 3"];
-                row.insertCell(6).textContent = item["Month 4"];
-                row.insertCell(7).textContent = item["Month 5"];
-                row.insertCell(8).textContent = item["Month 6"];
-                row.insertCell(9).textContent = item["Total"];
+                row.insertCell(3).textContent = item["Contribution Date"];
+               
             });
         }
     </script>
