@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributions List from Excel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for the table */
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1; /* Light gray background on hover */
+            transform: scale(1.02); /* Slight zoom effect */
+            transition: transform 0.2s; /* Smooth transition */
+        }
+
+        /* Optional: Add some padding to the table */
+        .table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center my-4">Contributions List from Excel</h2>
+        <table class="table table-bordered table-hover" id="data-table">
+            <thead class="thead-light">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Month 1</th>
+                    <th>Month 2</th>
+                    <th>Month 3</th>
+                    <th>Month 4</th>
+                    <th>Month 5</th>
+                    <th>Month 6</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Fetch data from the server
+        fetch('http://localhost:3000/data')
+            .then(response => response.json())
+            .then(data => populateTable(data))
+            .catch(error => console.error('Error fetching data:', error));
+
+        // Function to populate the table with data
+        function populateTable(data) {
+            const tableBody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = ''; // Clear existing data
+
+            data.forEach((item, index) => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = index + 1; // Index
+                row.insertCell(1).textContent = item.Name;
+                row.insertCell(2).textContent = item.Location;
+                row.insertCell(3).textContent = item["Month 1"];
+                row.insertCell(4).textContent = item["Month 2"];
+                row.insertCell(5).textContent = item["Month 3"];
+                row.insertCell(6).textContent = item["Month 4"];
+                row.insertCell(7).textContent = item["Month 5"];
+                row.insertCell(8).textContent = item["Month 6"];
+                row.insertCell(9).textContent = item["Total"];
+            });
+        }
+    </script>
+</body>
+
+</html>

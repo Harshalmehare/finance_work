@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Financial Services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .contact-header {
+            background: url('https://picsum.photos/1920/401') no-repeat center center/cover;
+            color: white;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 3rem;
+        }
+
+        .contact-header p {
+            font-size: 1.5rem;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        h2{
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpg" alt="Indebt Free Foundation Logo" style="height: 40px; margin-right: 10px;">
+            Indebt Free Foundation
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Aboutus.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="contact-header" id="contact">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you!</p>
+    </header>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Get in Touch</h2>
+                <form action="https://formspree.io/f/mnnnjgov" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"> Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6 contact-info">
+                <h2>Contact Information</h2>
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <i class="fas fa-phone icon"></i>
+                        <p><strong>Phone:</strong><a href="https://wa.me/918427986010"> +91-8427986010</a></p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope icon"></i>
+                        <p><strong>Email:</strong> <a href="mailto:info@financialservices.com" style="color: blue; text-decoration: underline;">info@financialservices.com</a></p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marker-alt icon"></i>
+                        <p><strong>Address:</strong> 123 Financial St, Money City, CA 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7563.39626740642!2d73.72577722453175!3d18.587643175533202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbe81a6a41eb%3A0x14edb7a7c717af79!2sINFOSYS%20PHASE-1%2C%20Phase%201%2C%20Hinjawadi%20Rajiv%20Gandhi%20Infotech%20Park%2C%20Hinjawadi%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411057!5e0!3m2!1sen!2sin!4v1735106920590!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h5>Contact Information</h5>
+            <p><strong>Email:</strong> <a href="mailto:info@debtfreefoundation.com">info@debtfreefoundation.com</a></p>
+            <p><strong>फोन:</strong><a href="https://wa.me/918427986010">91-8427986010</a></p>
+            <p><strong>Social Media Links:</strong> <a href="https://www.facebook.com/profile.php?id=61571589090667&mibextid=ZbWKwL">Facebook</a> | <a href="#">Twitter</a> | <a href="https://www.instagram.com/wrinnrahat_foundation/?fbclid=IwZXh0bgNhZW0CMTEAAR2ittsRA-aG85bV3K71YrrFJeIUPLVxPMmJ-SyC1q1EJvVMiPXUl_FZT5c_aem_4ZVxHTo43_2iEoQdeGix1Q">Instagram</a> | <a href="#">LinkedIn</a></p>
+            <p><strong>Design & Develop By ALMA Creators</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

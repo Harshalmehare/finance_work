@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>समाज को आर्थिक स्वतंत्रता की ओर</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background: url('https://picsum.photos/seed/picsum/1920/1080') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            animation: fadeIn 1s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            animation: fadeIn 1.5s;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
+            margin: 5px;
+            /* Add some margin between buttons */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .donation-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .donation-option {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #donate p {
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">indebtfreefoundation</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Contributions.html">Contributions</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <h1>समाज को आर्थिक स्वतंत्रता की ओर</h1>
+        <p>हम कर्ज से राहत, कानूनी सुरक्षा और स्थिरता प्रदान करते हैं।</p>
+        <div>
+            <div>
+                <a href="#join" class="btn btn-primary">हमसे जुड़ें</a>
+                <a href="#donate" class="btn btn-primary">डोनेट करें</a>
+                <a href="/Aboutus.html" class="btn btn-primary">अधिक जानें</a>
+            </div>
+    </header>
+
+    <!-- Join Us Section -->
+    <!-- Join Us Section -->
+    <div class="container my-5" id="join">
+        <h2 class="section-title">हमसे जुड़ें</h2>
+        <p>आपका छोटा योगदान, बड़ा बदलाव। ₹1,000/माह से जुड़ें।</p>
+        <iframe src="https://forms.gle/v5Ka3xsXD4x6PUpDA" width="100%" height="800" frameborder="0" marginheight="0"
+            marginwidth="0">
+            Loading…
+        </iframe>
+    </div>
+
+
+    <div class="container my-5" id="donate">
+        <h2 class="section-title">डोनेशन करने का विकल्प</h2>
+        <p>आपका योगदान हमारे कर्ज मुक्त अभियान को बल देगा।</p>
+      
+        <!-- Donor Details Form -->
+        <div class="donor-details">
+          <input type="text" id="donorName" class="form-control my-2" placeholder="अपना नाम दर्ज करें" required />
+          <input type="email" id="donorEmail" class="form-control my-2" placeholder="अपना ईमेल दर्ज करें" required />
+          <input type="tel" id="donorPhone" class="form-control my-2" placeholder="अपना फ़ोन नंबर दर्ज करें" required />
+        </div>
+      
+        <!-- Donation Options -->
+        <div class="donation-options">
+          <div class="donation-option">
+            <h5>₹500</h5>
+            <button class="btn btn-primary" onclick="makePayment(500)">डोनेट करें</button>
+          </div>
+          <div class="donation-option">
+            <h5>₹1,000</h5>
+            <button class="btn btn-primary" onclick="makePayment(1000)">डोनेट करें</button>
+          </div>
+          <div class="donation-option">
+            <h5>₹5,000</h5>
+            <button class="btn btn-primary" onclick="makePayment(5000)">डोनेट करें</button>
+          </div>
+          <div class="donation-option">
+            <h5>₹10,000</h5>
+            <button class="btn btn-primary" onclick="makePayment(10000)">डोनेट करें</button>
+          </div>
+          <div class="donation-option">
+            <h5>या अपनी राशि डालें</h5>
+            <input type="number" id="customAmount" class="form-control" placeholder="राशि डालें" />
+            <button class="btn btn-primary" onclick="customPayment()">डोनेट करें</button>
+          </div>
+        </div>
+        <p>आपका योगदान हमारी योजनाओं को साकार करेगा!</p>
+      </div>
+    
+
+    <!-- Become a Director Section -->
+    <!-- Become a Director Section -->
+    <div class="container my-5" id="become-director">
+        <h2 class="section-title">डायरेक्टर बनने की प्रक्रिया</h2>
+
+        <!-- Card for Director Opportunity -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p>100 नए सदस्य जोड़ने पर डायरेक्टर बनने का अवसर मिलेगा!</p>
+            </div>
+        </div>
+
+        <!-- Card for Donation Requirement -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p>₹1,00,000 का डोनेशन करके भी डायरेक्टर बन सकते हैं!</p>
+            </div>
+        </div>
+
+        <!-- Card for Incentive for Joining Members -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p>जोड़ने वाले सदस्य के लिए 10% प्रोत्साहन राशि।</p>
+            </div>
+        </div>
+
+        <!-- Card for Director Benefits -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">डायरेक्टर के लाभ:</h5>
+                <ul>
+                    <li>सामाजिक पहचान और सम्मान।</li>
+                    <li>नौकरियों और निवेश के अवसर।</li>
+                    <li>नए सदस्य जोड़ने पर अतिरिक्त लाभ।</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Display of Added Members Section -->
+    <div class="container my-5" id="members">
+        <h2 class="section-title">सदस्य जोड़ने का प्रदर्शन</h2>
+        <p>डायरेक्टर के आधार पर व्यवस्थित सदस्य का विवरण:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>सदस्य का नाम</th>
+                    <th>संपर्क जानकारी</th>
+                    <th>जोड़ने की तारीख</th>
+                    <th>प्रोफ़ाइल चित्र</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>राधिका शर्मा</td>
+                    <td>radhika@example.com</td>
+                    <td>2023-01-15</td>
+                    <td><img src="https://via.placeholder.com/50" alt="Profile" class="img-fluid"></td>
+                </tr>
+                <tr>
+                    <td>सौरव मेहता</td>
+                    <td>saurav@example.com</td>
+                    <td>2023-02-20</td>
+                    <td><img src="https://via.placeholder.com/50" alt="Profile" class="img-fluid"></td>
+                </tr>
+                <tr>
+                    <td>नीता वर्मा</td>
+                    <td>neeta@example.com</td>
+                    <td>2023-03-10</td>
+                    <td><img src="https://via.placeholder.com/50" alt="Profile" class="img-fluid"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Donation and Contribution Tracking Section -->
+    <div class="container my-5" id="tracking">
+        <h2 class="section-title">डोनेशन और योगदान की ट्रैकिंग</h2>
+        <div class="card">
+            <div class="card-body text-center">
+                <p>आपके योगदान की पूरी जानकारी और उपयोग:</p>
+                <p>मासिक योगदान: <strong>₹1,000</strong></p>
+                <p>सामूहिक योगदान राशि: <strong>₹25,00,000+</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Foundation's Objectives and Strategies Section -->
+    <div class="container my-5" id="objectives">
+        <h2 class="section-title">फाउंडेशन के उद्देश्य और रणनीतियाँ</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">कर्ज से मुक्ति योजना:</h5>
+                        <p class="card-text">प्रत्येक सदस्य मासिक ₹1,000 का योगदान करेगा, जो कर्ज राहत में उपयोग होगा।
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">कृषि और पर्यटन में निवेश:</h5>
+                        <p class="card-text">किसानों को स्मार्ट कृषि, जैविक खेती, जल प्रबंधन में जोड़ा जाएगा।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">फूड वेस्ट मैनेजमेंट:</h5>
+                        <p class="card-text">खाद्य अपशिष्ट प्रबंधन और पुनः उपयोग के लिए प्रणाली विकसित करना।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">प्रशिक्षण और रोजगार:</h5>
+                        <p class="card-text">बेरोजगारों को प्रशिक्षित करना और रोजगार सृजन में योगदान देना।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">राजनीतिक सक्रियता:</h5>
+                        <p class="card-text">युवा नेताओं और कार्यकर्ताओं को राजनीति में शामिल करना।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How Your Contribution is Utilized Section -->
+    <div class="container my-5" id="utilization">
+        <h2 class="section-title">आपके योगदान का उपयोग कैसे होता है?</h2>
+        <h5>इन्फोग्राफिक और पाई चार्ट:</h5>
+        <img src="image.png" alt="Contribution Utilization Infographic" class="img-fluid mb-4">
+        <ul>
+            <li>25% कर्ज माफी - "बैंकों और वित्तीय संस्थाओं से कर्ज निवारण में सहायक।"</li>
+            <li>15% प्रशासनिक खर्च - "संगठन संचालन और सेवाओं को प्रभावी बनाए रखना।"</li>
+            <li>10% आपातकालीन फंड - "आपातकालीन संकटों से निपटने के लिए तैयार।"</li>
+            <li>50% निवेश - "कृषि, पर्यटन, और फूड वेस्ट मैनेजमेंट जैसे क्षेत्रों में निवेश।"</li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h5>संपर्क जानकारी</h5>
+            <p><strong>ईमेल:</strong> <a href="mailto:info@debtfreefoundation.com">info@debtfreefoundation.com</a></p>
+            <p><strong>फोन:</strong> +91-XXXXXXXXXX</p>
+            <p><strong>सोशल मीडिया लिंक:</strong> <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a
+                    href="#">Instagram</a>, <a href="#">LinkedIn</a></p>
+            <p><strong>कानूनी नोटिस:</strong> "कर्ज मुक्त भारत अभियान का हिस्सा बनने के लिए आपका स्वागत है!"</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script>
+        function makePayment(amount) {
+          const donorName = document.getElementById("donorName").value;
+          const donorEmail = document.getElementById("donorEmail").value;
+          const donorPhone = document.getElementById("donorPhone").value;
+      
+          if (!donorName || !donorEmail || !donorPhone) {
+            alert("कृपया अपना नाम, ईमेल, और फ़ोन नंबर भरें।");
+            return;
+          }
+      
+          fetch("/create-order", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ amount, donorName, donorEmail, donorPhone }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                const options = {
+                  key: "YOUR_RAZORPAY_KEY_ID",
+                  amount: data.amount,
+                  currency: "INR",
+                  name: donorName,
+                  description: "Donation Payment",
+                  order_id: data.order_id,
+                  prefill: {
+                    name: donorName,
+                    email: donorEmail,
+                    contact: donorPhone,
+                  },
+                  theme: {
+                    color: "#3399cc",
+                  },
+                  handler: function (response) {
+                    // Handle successful payment
+                    alert("Payment Successful!");
+                    fetch("/verify-payment", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                      body: JSON.stringify({
+                        paymentId: response.razorpay_payment_id,
+                        orderId: response.razorpay_order_id,
+                        donorName,
+                        donorEmail,
+                        donorPhone,
+                      }),
+                    });
+                  },
+                };
+      
+                const rzp = new Razorpay(options);
+                rzp.open();
+              } else {
+                alert("Failed to create order. Please try again.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              alert("Something went wrong. Please try again.");
+            });
+        }
+      
+        function customPayment() {
+          const amount = document.getElementById("customAmount").value;
+          if (amount && amount > 0) {
+            makePayment(amount);
+          } else {
+            alert("Please enter a valid amount!");
+          }
+        }
+      </script>
+</body>
+
+</html>

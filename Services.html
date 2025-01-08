@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Financial Freedom Foundation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: url('https://picsum.photos/1920/600') no-repeat center center/cover;
+            color: white;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-size: 2.5rem;
+        }
+
+        .service-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-body {
+            flex: 1; /* This allows the card body to take up available space */
+        }
+        
+        .icon {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 15px; /* Add some space below the icon */
+        }
+
+        h2{
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.jpg" alt="Indebt Free Foundation Logo" style="height: 40px; margin-right: 10px;">
+                Indebt Free Foundation
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>हमारी सेवाएँ</h1>
+        <p>समाज को आर्थिक स्वतंत्रता की ओर ले जाने के लिए हम विभिन्न सेवाएँ प्रदान करते हैं।</p>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container my-5">
+        <h2 class="section-title">हमारी सेवाएँ</h2>
+
+        <div class="row">
+            <!-- Debt Relief Service -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h5 class="card-title">कर्ज से राहत</h5>
+                        <p class="card-text">हम कर्ज से राहत प्रदान करते हैं, जिससे लोग अपने वित्तीय बोझ को कम कर सकें और एक नई शुरुआत कर सकें।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Protection Service -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-shield-alt "></i></div>
+                        <h5 class="card-title">कानूनी सुरक्षा</h5>
+                        <p class="card-text">हम कानूनी सहायता प्रदान करते हैं ताकि लोग अपने अधिकारों की रक्षा कर सकें और अन्याय से बच सकें।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Stability Service -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <h5 class="card-title">वित्तीय स्थिरता</h5>
+                        <p class="card-text">हम वित्तीय स्थिरता के लिए रणनीतियाँ और संसाधन प्रदान करते हैं, जिससे लोग अपने वित्त को बेहतर तरीके से प्रबंधित कर सकें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Community Engagement Service -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-users"></i></div>
+                        <h5 class="card-title">सामुदायिक भागीदारी</h5>
+                        <p class="card-text">हम सामुदायिक कार्यक्रमों में भागीदारी को प्रोत्साहित करते हैं, जिससे लोग सामाजिक बदलाव में योगदान कर सकें।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Membership Program -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-user-plus"></i></div>
+                        <h5 class="card-title">सदस्यता कार्यक्रम</h5>
+                        <p class="card-text">हमारा सदस्यता कार्यक्रम लोगों को सामूहिक प्रयासों में शामिल होने का अवसर देता है।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Options -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-donate"></i></div>
+                        <h5 class="card-title">डोनेशन के विकल्प</h5>
+                        <p class="card-text">हम विभिन्न डोनेशन विकल्प प्रदान करते हैं, जिससे लोग हमारे अभियानों का समर्थन कर सकते हैं।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Director Program -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-star"></i></div>
+                        <h5 class="card-title">डायरेक्टर कार्यक्रम</h5>
+                        <p class="card-text">हमारे डायरेक्टर कार्यक्रम में शामिल होकर आप सामाजिक बदलाव में महत्वपूर्ण भूमिका निभा सकते हैं।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contribution Tracking -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-clipboard-list"></i></div>
+                        <h5 class="card-title">योगदान की ट्रैकिंग</h5>
+                        <p class="card-text">हम आपके योगदान की पूरी जानकारी और उपयोग को ट्रैक करते हैं, जिससे पारदर्शिता बनी रहे।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Training and Employment -->
+            <div class="col-md-4">
+                <div class="service-card card">
+                    <div class="card-body text-center">
+                        <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <h5 class="card-title">प्रशिक्षण और रोजगार</h5>
+                        <p class="card-text">हम बेरोजगारों को प्रशिक्षित करने और रोजगार सृजन में योगदान देने के लिए कार्यक्रम चलाते हैं।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <h5>संपर्क जानकारी</h5>
+            <p><strong>ईमेल:</strong> <a href="mailto:info@debtfreefoundation.com">info @debtfreefoundation.com</a></p>
+            <p><strong>फोन:</strong><a href="https://wa.me/918427986010">91-8427986010</a></p>
+            <p><strong>सोशल मीडिया लिंक:</strong> <a href="https://www.facebook.com/profile.php?id=61571589090667&mibextid=ZbWKwL">Facebook</a> | <a href="#">Twitter</a> | <a href="https://www.instagram.com/wrinnrahat_foundation/?fbclid=IwZXh0bgNhZW0CMTEAAR2ittsRA-aG85bV3K71YrrFJeIUPLVxPMmJ-SyC1q1EJvVMiPXUl_FZT5c_aem_4ZVxHTo43_2iEoQdeGix1Q">Instagram</a> | <a href="#">LinkedIn</a></p>
+            <p><strong>Design & Develop By ALMA Creators</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

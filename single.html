@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt-Free Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .hero {
+            background: url('https://picsum.photos/1920/1080') no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 40px;
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Debt-Free Foundation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#what-we-do">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#help">How You Can Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#success">Success Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>"आपकी मदद से एक नई शुरुआत, कर्ज़ से मुक्ति की राह!"</h1>
+        <h2>"With Your Help, A New Beginning, Freedom from Debt!"</h2>
+        <button class="btn btn-primary mt-4">Learn More</button>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us (हमारे बारे में)</h2>
+            <p>हमारा उद्देश्य: हमारी एनजीओ का मिशन है उन लोगों की मदद करना जो कर्ज़ के बोझ तले दबे हैं और मानसिक या वित्तीय संकट का सामना कर रहे हैं।</p>
+            <p>Our Mission: To provide support and solutions to those struggling with debt, while inspiring others to join us in creating a debt-free and hopeful society.</p>
+        </div>
+    </section>
+
+    <section id="what-we-do" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">What We Do (हम क्या करते हैं)?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="financial-guidance.jpg" alt="Financial Guidance" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Financial Guidance (वित्तीय मार्गदर्शन)</h5>
+                            <p class="card-text">We offer expert financial advice to help people pay off their debts and regain financial stability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src="emotional-support.jpg" alt="Emotional Support" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Emotional Support (भावनात्मक समर्थन)</h5>
+                            <p class="card-text">We provide emotional support to individuals facing the mental burden of debt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="help" class="py-5">
+        <div class="container">
+            <h2 class="section-title">How You Can Help (आप कैसे मदद कर सकते हैं)?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-donate fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Donate (दान करें)</h5>
+                            <p class="card-text">Donate to support our work and help us assist more people in need.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-hands-helping fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Volunteer (स्वयंसेवक बनें)</h5>
+                            <p class="card-text">Become a volunteer and assist us in providing support to those in need.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-bullhorn fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">Spread Awareness (जागरूकता फैलाएं)</h5>
+                            <p class="card-text">Spread the word through social media, friends, and family to raise awareness about debt issues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="success">
+        <div class="container">
+            <h2 class="section-title">Success Stories (सफलता की कहानियाँ)</h2>
+            <blockquote>"मैंने कर्ज़ के कारण आत्महत्या के बारे में सोचा था, लेकिन इस एनजीओ ने मेरी मदद की।"</blockquote>
+            <blockquote>"मुझे विश्वास नहीं था कि मेरी ज़िन्दगी फिर से पटरी पर आ सकती है।"</blockquote>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us (हमसे संपर्क करें)</h2>
+            <p>Phone: [Phone Number]</p>
+            <p>Email: [Email Address]</p>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Debt-Free Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
